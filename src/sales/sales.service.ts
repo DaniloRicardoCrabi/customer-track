@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { CreateSalesDto } from './dto/create-sales.dto';
 import { Sales, SalesDocument } from './schemas/sales.schema';
 
 
@@ -10,8 +10,19 @@ export class SalesService {
 
     constructor(
         @InjectModel(Sales.name) private salesModel: Model<SalesDocument>
-        private readonly configService: ConfigService
-    ) { }
+        ) {}
 
-    async create()
+    async create(createSalesDto: CreateSalesDto): Promise<Sales> {
+        const createdSales = new this.salesModel(createSalesDto);
+        return createdSales.save();
+    }
+
+
+    async findSalesByCustomer(customerId: string ){
+        return this.salesModel.find({customerId : customerId}).exec();
+    }
+
+    async findAll(): Promise<Sales[]> {
+        return this.salesModel.find().exec();
+    }
 }

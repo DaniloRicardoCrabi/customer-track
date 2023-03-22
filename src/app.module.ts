@@ -22,6 +22,9 @@ import * as Joi from 'joi';
       }),
       inject: [ConfigService],
     }),
-    SalesModule, RedeemModule, CustomerModule]
+    SalesModule,
+    RedeemModule,
+    CustomerModule
+  ]
 })
 export class AppModule {}

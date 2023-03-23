@@ -27,6 +27,9 @@ export class Sales {
     @Prop({ type: Number, required: true })
     quantityProducts: number;
 
+    @Prop({ type: Number})
+    valueTotal: number;
+
     @Prop({ type: Date })
     saleDate: Date;
 }

@@ -52,7 +52,7 @@ export class CustomerBehavior {
   lastSaleDate: Date;
 
   @Prop({ type: Number })
-  quantityBalance: string;
+  quantityBalance: Number;
 
   @Prop({ type: Number, default: 0 })
   quantityProducts: number;

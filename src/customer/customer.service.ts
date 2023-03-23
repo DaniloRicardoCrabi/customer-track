@@ -20,11 +20,11 @@ export class CustomerService {
 
     async findByCustomerIdAndProgramId(customerId: string, programId: string ){
         const query = { customerId, programId };
-        return this.customerBehaviorModel.find(query).exec();
+        return this.customerBehaviorModel.find(query);
     }
 
     async findAll(): Promise<CustomerBehavior[]> {
-        return this.customerBehaviorModel.find().exec();
+        return this.customerBehaviorModel.find();
     }
     
 }

@@ -1,0 +1,33 @@
+
+export const customerBehaviorMock = 
+{
+    customerId: "1234",
+    cardNumber: "1234567890",
+    name: "John Smith",
+    storeId: "5678",
+    programId: "abcd",
+    categoryId: "5678",
+    birthDate: new Date("1990-01-01"),
+    gender: "Male",
+    cityId: "9012",
+    countryId: "3456",
+    stateId: "7890",
+    cellPhone: "555-555-5555",
+    email: "john.smith@example.com",
+    firstSaleDate: new Date("2022-01-01"),
+    lastSaleDate: new Date("2022-03-01"),
+    quantityBalance: 1500,
+    quantityProducts: 10,
+    valueTotal: 200,
+    valueAverageTicket: 20,
+    quantitySales: 5,
+    quantityRedeems: 2,
+    quantityPointsRedeem: 50,
+    firstDateRedeem: new Date("2022-02-01"),
+    lastDateRedeem: new Date("2022-03-01"),
+    lgpdCampaign: "campaign1",
+    lgpdStatusClient: "status1",
+    lgpdDataUsage: "usage1",
+    updatedAt: new Date("2022-03-20"),
+    createdAt: new Date("2022-01-01")
+  }

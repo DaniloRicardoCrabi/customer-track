@@ -46,8 +46,8 @@ export class CustomerBehaviorDto {
     @ApiProperty({ example: '2022-02-01', description: 'The customer last sale date', required: false })
     readonly lastSaleDate?: Date;
   
-    @ApiProperty({ example: '100', description: 'The customer quantity balance', required: false })
-    readonly quantityBalance?: string;
+    @ApiProperty({ example: 100, description: 'The customer quantity balance', required: false })
+    readonly quantityBalance?: number;
   
     @ApiProperty({ example: 5, description: 'The number of products purchased by the customer', required: false })
     readonly quantityProducts?: number;

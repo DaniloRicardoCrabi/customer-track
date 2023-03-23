@@ -19,7 +19,7 @@ export class CustomerBehavior {
   storeId: string;
 
   @Prop({ type: String, required: true })
-  programId: number;
+  programId: string;
 
   @Prop({ type: String })
   categoryId: string;
